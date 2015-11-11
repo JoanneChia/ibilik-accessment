@@ -1,0 +1,9 @@
+<div class="container">
+<h1>Edit Your Properties</h1>
+
+<form method="post" action="/products/<%=@product.id%>/edit">
+	<input type="hidden", name="_method", value="put">
+	<input name="property[description]" value="<%=@product.description%>">
+	<input name="property[price]" value="<%=@product.price%>">
+	<input type="submit" value="Edit">
+</form>
