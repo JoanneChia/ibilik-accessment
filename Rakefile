@@ -167,6 +167,7 @@ Test and Debug
 # spec - to create unit test 'spec/<filename>_spec.rb' file
 	$ rake generate:spec NAME=<filename>
 
+
 MVC
 -----------------
 # to create a model file

@@ -1,2 +1,28 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<h1>WELCOME TO MY BILIK</h1>
+
+<form action="/signup" method="post">
+	<input type="submit" value="Sign Up">
+</form>
+
+<form action="/login" method="get">
+	<input type="submit" value="Log In">
+</form>
+
+
+<% if user_logged_in? %>
+	  <h2>Welcome <%= @user.name %>!</h2>
+	  <h2>What would you like to do today?</h2>
+
+		<form action="/properties/new" method="get">
+		<input type="submit" value="Add A Property">
+		</form> 
+
+
+		<form action="/logout" method="POST">
+		<input id = "logout" type="submit" value="logout">
+		</form>
+  <% end %>
+
+<%= @logout_message%>  
+
+
